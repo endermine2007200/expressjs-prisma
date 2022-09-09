@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000;
 let db = {}
 fs.writeFile('../db/db.json',JSON.stringify(db),(err)=>{})
 
-app.use(express.static("views"))
 app.use(body.raw())
 app.use(body.json())
 app.use(body.urlencoded({extended:true}))
