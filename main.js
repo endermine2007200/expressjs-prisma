@@ -68,9 +68,6 @@ function create(){
     db[id] = true
     fs.writeFileSync('./db/db.json',JSON.stringify(db),(err)=>{})
         start(id)
-    setTimeout(() => {
-    }, 10 * (60 * (10 ** 3))); //10 minute
-    global.conns[id].ws.close()
     return id
 }
 
