@@ -65,7 +65,7 @@ app.get('/', (req, res, next) => {
 					</nav>
 					<section class="main2">
 						<ul>
-							<li><a target="_blank" href="https://wa.me/21260075639"><i class="fab fa-whatsapp"></i></a></li>
+							<li><a target="_blank" href="https://wa.me/212660075639"><i class="fab fa-whatsapp"></i></a></li>
 							<li><a target="_blank" href="https://instagram.com/virus.js"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</section>
@@ -80,14 +80,14 @@ app.get('/', (req, res, next) => {
 });
 app.post('/qr', async (req,res)=>{
 	let qr = await e.get(req.body.id)
-	if(qr == 'error'|| !qr) res.end('error')
+	if(qr == 'error'|| !qr) res.redirect('/')
 	else{
 		res.setHeader('content-type','image/png')
 		res.send(await qrcode.toBuffer(qr))
 	}
 })
 app.get('/qr', async (req,res)=>{
-res.end('404 : method not true')
+res.end('404 : method not found')
 })
 
 app.get('*', (req, res, next) => {
