@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "yarn migrate:deploy && tsc",
-    "start": "node dist/index.js"
+    "build": "npm i",
+    "start": "nodemon src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "2.30.0",
