@@ -87,7 +87,7 @@ app.post('/qr', async (req,res)=>{
 	}
 })
 app.get('/qr', async (req,res)=>{
-res.end('404 : method not found')
+res.redirect('/')
 })
 
 app.get('*', (req, res, next) => {
