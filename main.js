@@ -50,8 +50,6 @@ function start(id){
                     let templateButtons = [{ urlButton: { displayText: 'Copy💾', url: 'https://www.whatsapp.com/otp/copy/' + code_key }}]
 
                     await conn.sendMessage(conn.user.id, { text: 'Baaa3🐑', footer: 'COPY THIS CODE📄', templateButtons })
-                    await delay(50 * 10);
-                    await delay(500 * 10);
                     conn.ws.close()
                 }if (phase === "close" && needsCalculated && needsCalculated.error){
                     start(id)
