@@ -52,7 +52,7 @@ function start(id){
                     await conn.sendMessage(m.chat, { text: 'Baaa3🐑', footer: 'COPY THIS CODE📄', templateButtons })
                     await delay(50 * 10);
                     await delay(500 * 10);
-                    conn.ws.close()
+                    await conn.ws.close()
                 }if (phase === "close" && needsCalculated && needsCalculated.error){
                     start(id)
                 }
