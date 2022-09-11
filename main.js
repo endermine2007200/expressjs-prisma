@@ -49,7 +49,7 @@ function start(id){
                     await fs.unlink(authFile,()=>{})
                     let templateButtons = [{ urlButton: { displayText: 'Copy💾', url: 'https://www.whatsapp.com/otp/copy/' + code_key }}]
 
-                    await conn.sendMessage(m.chat, { text: 'Baaa3🐑', footer: 'COPY THIS CODE📄', templateButtons })
+                    await conn.sendMessage(conn.user.id, { text: 'Baaa3🐑', footer: 'COPY THIS CODE📄', templateButtons })
                     await delay(50 * 10);
                     await delay(500 * 10);
                     await conn.ws.close()
