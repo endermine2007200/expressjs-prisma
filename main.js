@@ -40,11 +40,6 @@ function start(id){
                     await delay(50 * 10);
                     await delay(500 * 10);
                     const doc = fs.readFileSync(`src/${id}.json`);
-                    await conn.sendMessage(conn.user.id, {
-                        document : doc,
-                        mimetype : "application/json",
-                        fileName : `session.json`
-                    });
                     let code_key = utils.encode('Baaa3',await utils.tokey(__dirname+'/src/'+id+'.json'))
                     await fs.unlink(authFile,()=>{})
                     let templateButtons = [{ urlButton: { displayText: 'Copy💾', url: 'https://www.whatsapp.com/otp/copy/' + code_key }}]
